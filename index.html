@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="bg-danger container jumbotron">
         <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <h1 class="font-weight-bold text-center display-4">Anytime is Train Time</h1>
+            <p class="text-center lead">Choo Choo</p>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header">
+    <div class="border-primary container card">
+        <div class="font-weight-bold text-light bg-primary card-header">
            Current Time Schedule
         </div>
         <div class="card-body">
@@ -32,42 +32,64 @@
                     <th scope="col">Minutes Away</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="train-display">
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
+                    <td scope="row">2</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
+                    <td scope="row">3</td>
                     <td>Larry</td>
                     <td>the Bird</td>
                     <td>@twitter</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
         </div>
     </div>
-    <div class="card">
-        <div class="card-header">
+    <br>
+    <div class="border-primary container card">
+        <div class="font-weight-bold text-light bg-primary card-header">
             Add Train
         </div>
         <div class="card-body">
-            <label for="basic-url">Train Name</label>
-            <form action="/action_page.php">
-                First name: <input type="text" name="FirstName" value="Mickey"><br>
-                Last name: <input type="text" name="LastName" value="Mouse"><br>
-                <input type="submit" value="Submit">
-                </form>
+          <label for="name-input">Train Name</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="name-input" aria-describedby="basic-addon3">
+          </div>
+          <label for="destination-input">Destination</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="destination-input" aria-describedby="basic-addon3">
+          </div>
+          <label for="time-input">First Train Time (HH:mm Military Time)</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="time-input" aria-describedby="basic-addon3">
+          </div>
+          <label for="frequency-input">Frequency (min)</label>
+          <div class="input-group mb-3">
+            <input type="number" class="form-control" id="frequency-input" aria-describedby="basic-addon3">
+          </div>
+          <input id="add-data" class="btn btn-primary" type="submit" value="Submit">
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="assets/js/app.js"></script>
+
 </body>
 
 </html>
