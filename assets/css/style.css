@@ -1,3 +1,15 @@
 .card{
     padding: 0%;
 }
+
+#header{
+    font-family: 'Notable', sans-serif;
+    background-color: rgb(92, 28, 3);
+    color: white;
+}
+
+body{
+    /* background-image: url("../images/gravel.png");
+    background-repeat: repeat; */
+    background-color: whitesmoke;
+}
